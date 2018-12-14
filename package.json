@@ -1,0 +1,40 @@
+{
+  "name": "valkyrie-crossing-html5-game",
+  "version": "1.0.0",
+  "description": "A Valkyrie Crossing HTML5 Game.",
+  "keywords": [
+    "game",
+    "valkyrie-crossing-html5-game",
+    "valkyrie 3",
+    "crossing-game",
+    "html5-game"
+  ],
+  "devDependencies": {
+    "expose-loader": "0.7.5",
+    "ts-loader": "5.3.0",
+    "typescript": "3.1.6",
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
+  },
+  "dependencies": {
+    "phaser": "3.10.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development && webpack-dev-server --mode development",
+    "build": "webpack --mode production && webpack-dev-server --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrocurioso/valkyrie-crossing-html5-game.git"
+  },
+  "author": {
+    "name": "leandrocurioso",
+    "email": "leandro.curioso@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrocurioso/valkyrie-crossing-html5-game/issues"
+  },
+  "homepage": "https://github.com/leandrocurioso/valkyrie-crossing-html5-game#readme"
+}
