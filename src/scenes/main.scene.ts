@@ -90,12 +90,18 @@ export class MainScene extends Phaser.Scene {
 
   create(): void {
     // Audio
-    this.winningEffect = this.sound.add("winning");
-    this.collisionEffect = this.sound.add("collision");
-    this.backgroundMusic = this.sound.add("background", {
-      loop: true
-    });
-    this.backgroundMusic.play();
+    if (!this.winningEffect ) {
+      this.winningEffect = this.sound.add("winning");
+    }
+    if (!this.collisionEffect ) {
+      this.collisionEffect = this.sound.add("collision");
+    }
+    if (!this.backgroundMusic ) {
+      this.backgroundMusic = this.sound.add("background", {
+        loop: true
+      });
+      this.backgroundMusic.play();
+    }
 
     // Graphic
     const gameW = this.sys.game.config.width as number;
@@ -150,9 +156,6 @@ export class MainScene extends Phaser.Scene {
     }, this);
 
     this.cameras.main.on("camerafadeoutcomplete", (camera2, effect2) => {
-      this.collisionEffect.destroy();
-      this.winningEffect.destroy();
-      this.backgroundMusic.destroy();
       this.scene.restart();
       return;
     }, this);
@@ -168,9 +171,6 @@ export class MainScene extends Phaser.Scene {
     }, this);
 
     this.cameras.main.on("camerafadeoutcomplete", (camera2, effect2) => {
-      this.collisionEffect.destroy();
-      this.winningEffect.destroy();
-      this.backgroundMusic.destroy();
       this.scene.restart();
       return;
     }, this);

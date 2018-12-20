@@ -1,6 +1,7 @@
 # Autosave files
 *~
-package-lock.json
+package-lock.jsos
+public/js/bundle.js
 
 # build
 [Oo]bj/

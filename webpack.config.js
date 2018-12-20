@@ -1,6 +1,6 @@
-var path = require('path');
-var pathToPhaser = path.join(__dirname, '/node_modules/phaser/');
-var phaser = path.join(pathToPhaser, 'dist/phaser.js');
+const path = require('path');
+const pathToPhaser = path.join(__dirname, '/node_modules/phaser/');
+const phaser = path.join(pathToPhaser, 'dist/phaser.js');
 
 module.exports = {
   target: "web",
@@ -22,8 +22,8 @@ module.exports = {
     host: '0.0.0.0',
     port: 3000,
     open: true,
-    watchContentBase: true
-    // compress: true
+    watchContentBase: true,
+    compress: true
   },
   resolve: {
     extensions: ['.ts', '.js'],

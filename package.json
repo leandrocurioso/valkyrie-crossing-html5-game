@@ -13,16 +13,26 @@
     "expose-loader": "0.7.5",
     "ts-loader": "5.3.0",
     "typescript": "3.1.6",
+    "uglify-js": "^3.4.9",
     "webpack": "4.25.1",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "3.1.10"
+    "webpack-dev-server": "3.1.10",    
+    "concurrently": "^4.1.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1",
+    "gulp-minify-css": "1.2.4",
+    "gulp-order": "1.2.0",
+    "gulp-rev": "9.0.0",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-uglify": "3.0.1",
+    "gulp-watch": "5.0.1"
   },
   "dependencies": {
     "phaser": "3.10.1"
   },
   "scripts": {
     "dev": "webpack --mode development && webpack-dev-server --mode development",
-    "build": "webpack --mode production && webpack-dev-server --mode production"
+    "build": "webpack && uglifyjs ./public/js/bundle.js -c -m -o ./public/js/bundle.min.js"
   },
   "repository": {
     "type": "git",
