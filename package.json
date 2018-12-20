@@ -5,7 +5,7 @@
   "keywords": [
     "game",
     "valkyrie-crossing-html5-game",
-    "valkyrie 3",
+    "valkyrie-game",
     "crossing-game",
     "html5-game"
   ],
@@ -16,7 +16,7 @@
     "uglify-js": "^3.4.9",
     "webpack": "4.25.1",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "3.1.10",    
+    "webpack-dev-server": "3.1.10",
     "concurrently": "^4.1.0",
     "gulp": "3.9.1",
     "gulp-concat": "2.6.1",
@@ -28,11 +28,13 @@
     "gulp-watch": "5.0.1"
   },
   "dependencies": {
-    "phaser": "3.10.1"
+    "phaser": "3.15.1"
   },
   "scripts": {
-    "dev": "webpack --mode development && webpack-dev-server --mode development",
-    "build": "webpack && uglifyjs ./public/js/bundle.js -c -m -o ./public/js/bundle.min.js"
+    "webpack:watch": "webpack --mode development && webpack-dev-server --mode development",
+    "build": "webpack && npm run gulp:minify-css && uglifyjs ./public/js/bundle.js -c -m -o ./public/js/bundle.min.js",
+    "watch": "./node_modules/.bin/concurrently \"npm run webpack:watch\"",
+    "gulp:minify-css": "./node_modules/.bin/gulp minify-css"
   },
   "repository": {
     "type": "git",

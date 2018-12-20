@@ -42,7 +42,6 @@ table {
 	border-spacing: 0;
 }
 canvas {
-    width: 100%;
+	width: 100% !important;
+	height: 100% !important;
 }
-
-body{font-size:10px;color:black;background-color:#FFFFFF;margin:0;padding:0}body div.container{text-align:center;margin:0;padding:0}body div.container div#game{margin:0;padding:0}

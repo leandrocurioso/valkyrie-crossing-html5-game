@@ -22,8 +22,8 @@ module.exports = {
     host: '0.0.0.0',
     port: 3000,
     open: true,
-    watchContentBase: true,
-    compress: true
+    watchContentBase: true
+    // compress: true
   },
   resolve: {
     extensions: ['.ts', '.js'],
